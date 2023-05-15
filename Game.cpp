@@ -13,15 +13,15 @@ public:
 	virtual void set();
 	void select() {
 		int a;
-		cout << "Âûáåðèòå âèä èãðû:\n1 - Èãðîê ïðîñòèâ èãðîêà\n2 - Èãðîê ïðîòèâ êîìïüþòåðà\n3 - Êîìïüþòåð ïðîòèâ êîìïüþòåðà";
+		cout << "Ð’Ñ‹Ð±ÐµÑ€Ð¸Ñ‚Ðµ Ñ‚Ð¸Ð¿ Ð¸Ð³Ñ€Ñ‹:\n1 - Ð˜Ð³Ñ€Ð¾Ðº Ð¿Ñ€Ð¾Ñ‚Ð¸Ð² Ð¸Ð³Ñ€Ð¾ÐºÐ°\n2 - Ð˜Ð³Ñ€Ð¾Ðº Ð¿Ñ€Ð¾Ñ‚Ð¸Ð² ÐºÐ¾Ð¼Ð¿ÑŒÑŽÑ‚ÐµÑ€Ð°\n3 - ÐšÐ¾Ð¼Ð¿ÑŒÑŽÑ‚ÐµÑ€ Ð¿Ñ€Ð¾Ñ‚Ð¸Ð² ÐºÐ¾Ð¼Ð¿ÑŒÑŽÑ‚ÐµÑ€Ð°";
 		cin >> a;
-		switch (a){
+		switch (a) {
 		case 1: {
 			PvP player1;
 			player1.start();
 			break;
 		}
-		case 2:{
+		case 2: {
 			PvC player2;
 			player2.start();
 			break;
@@ -29,7 +29,7 @@ public:
 		case 3: {
 			CvC player3;
 			player3.start();
-			break; 
+			break;
 		}
 		default:
 			break;
