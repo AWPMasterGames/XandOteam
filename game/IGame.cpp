@@ -7,9 +7,8 @@ using namespace std;
 void IGame::Select(int field[][3]) {
 	int choise;
 	//Visual visual;
-	//visual.starttext();
-	cin >> choise;
-	switch (choise) {
+	//visual.StartText();
+	switch (/*visual.InpuEngine()*/) {
 	case 1: {
 		GamePlayerVsPlayer(field);
 		break;
