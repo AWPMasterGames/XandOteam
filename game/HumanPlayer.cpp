@@ -1,8 +1,8 @@
-#include "Humanplayer.h"
+#include "HumanPlayer.h"
 #include <iostream>
 using namespace std;
 
-void Humanplayer::Turn(int field[][3], int symbolnumber) {
+void HumanPlayer::Turn(int field[][3], int symbolnumber) {
 	while (true) {
 		int row, column;
 		cout << "Êóäà õîòèòå ïîñòàâèòü ñèìâîë?\n";
