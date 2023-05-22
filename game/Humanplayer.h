@@ -1,6 +1,6 @@
 #pragma once
-#include "Iturn.h"
-class Humanplayer : public Iturn {
+#include "IPlayer.h"
+class Humanplayer : public IPlayer {
 public:
-	void _turn(int arr[][3], int symbolnumber);
+	void Turn(int field[][3], int symbolnumber);
 };
