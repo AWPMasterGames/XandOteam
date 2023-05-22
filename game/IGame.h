@@ -2,9 +2,9 @@
 
 class IGame {
 public:
-	void _select(int arr[][3]);
-	void game1(int arr[][3]);
-	void game2(int arr[][3]);
-	void game3(int arr[][3]);
-	void game4(int arr[][3]);
+	void Select(int field[][3]);
+	void GamePlayerVsPlayer(int field[][3]);
+	void GamePlayerVsPlayer(int field[][3]);
+	void GameComputerVsPlayer(int field[][3]);
+	void GameComputerVsComputer(int field[][3]);
 };
