@@ -4,28 +4,28 @@
 #include "AIPlayer.h"
 using namespace std;
 
-void IGame::_select(int arr[][3]) {
+void IGame::Select(int field[][3]) {
 	int choise;
 	//Visual visual;
 	//visual.starttext();
 	cin >> choise;
 	switch (choise) {
 	case 1: {
-		game1(arr);
+		GamePlayerVsPlayer(field);
 		break;
 	}
 	case 2: {
-		game2(arr);
+		GamePlayerVsComputer(field);
 
 		break;
 	}
 	case 3: {
-		game3(arr);
+		GameComputerVsPlayer(field);
 
 		break;
 	}
 	case 4: {
-		game4(arr);
+		GameComputerVsComputer(field);
 
 		break;
 	}
@@ -34,7 +34,7 @@ void IGame::_select(int arr[][3]) {
 	}
 }
 
-void IGame::game1(int arr[][3]) {
+void IGame::GamePlayerVsPlayer(int field[][3]) {
 	//Visual Field;
 	//Check checks;
 	//Humanplayer first;
@@ -50,7 +50,7 @@ void IGame::game1(int arr[][3]) {
 	//}
 }
 
-void IGame::game2(int arr[][3]) {
+void IGame::GamePlayerVsComputer(int field[][3]) {
 	//Visual Field;
 	//Check checks;
 	//Humanplayer first;
@@ -66,7 +66,7 @@ void IGame::game2(int arr[][3]) {
 	//}
 }
 
-void IGame::game3(int arr[][3]) {
+void IGame::GameComputerVsPlayer(int field[][3]) {
 	//Visual Field;
 	//Check checks;
 	//AITurn first;
@@ -82,7 +82,7 @@ void IGame::game3(int arr[][3]) {
 	//}
 }
 
-void IGame::game4(int arr[][3]) {
+void IGame::GameComputerVsComputer(int field[][3]) {
 	//Visual Field;
 	//Check checks;
 	//AITurn first;
