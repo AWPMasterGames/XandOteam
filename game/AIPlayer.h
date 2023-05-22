@@ -1,8 +1,8 @@
 #pragma once
-#include "Iturn.h"
+#include "IPlayer.h"
 #include <stdlib.h>
 #include <time.h>
-class AIPlayer :public Iturn {
+class AIPlayer :public IPlayer {
 public:
-	void _turn(int arr[][3], int symbolnumber);
+	void Turn(int field[][3], int symbolnumber);
 };
