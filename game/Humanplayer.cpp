@@ -2,16 +2,16 @@
 #include <iostream>
 using namespace std;
 
-void Humanplayer::_turn(int arr[][3], int symbolnumber) {
+void Humanplayer::Turn(int field[][3], int symbolnumber) {
 	while (true) {
 		int row, column;
-		cout << "Êóäà õîòèòå ïîñòàâèòü ñèìâîë?\n";
-		cout << "Ïî ðÿäó: ";
+		cout << "ÃŠÃ³Ã¤Ã  ÃµÃ®Ã²Ã¨Ã²Ã¥ Ã¯Ã®Ã±Ã²Ã Ã¢Ã¨Ã²Ã¼ Ã±Ã¨Ã¬Ã¢Ã®Ã«?\n";
+		cout << "ÃÃ® Ã°Ã¿Ã¤Ã³: ";
 		cin >> row;
-		cout << "Ïî ñòîëáöó: ";
+		cout << "ÃÃ® Ã±Ã²Ã®Ã«Ã¡Ã¶Ã³: ";
 		cin >> column;
-		if (arr[row - 1][column - 1] == 0) {
-			arr[row - 1][column - 1] = symbolnumber;
+		if (field[row - 1][column - 1] == 0) {
+			field[row - 1][column - 1] = symbolnumber;
 			break;
 		}
 	}
