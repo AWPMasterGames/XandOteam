@@ -4,7 +4,6 @@ class Save
 	int b[3][3];
 	int doh;
 public:
-	void saveFile(int a[][3], int hod); //БЕРЕТ ДАННЫЕ ИЗ ИГРЫ И СОХРАНЯЕТ ДЕЙСТВИЯ
-	void outFile(int a[][3], int hod); //ВОЗВРАЩАЕТ ДАННЫЕ КОТОРЫЕ ОН СОХРАНИЛ
+	void saveGame(int a[][3], int hod); //сохраняет игру
+	void outGame(int a[][3], int hod); //выгружает игру
 };
-
