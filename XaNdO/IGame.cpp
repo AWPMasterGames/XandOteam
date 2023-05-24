@@ -2,37 +2,98 @@
 #include "IGame.h"
 #include "Humanplayer.h"
 #include "AIPlayer.h"
+#include "Visual.h"
+#include "Check.h"
 using namespace std;
 
-void IGame::_select(int arr[][3]) {
-	int choise;
-	cout << "Выберите тип игры:\n1 - Игрок против игрока\n2 - Игрок против компьютера\n3 - Компьютер против игрока\n4 - Компьютер против компьютера";
-	cin >> choise;
-	switch (choise) {
+void IGame::Select(int field[][3]) {
+	Visual visual;
+	visual.StartText();
+	switch (visual.InpuEngine()) {
 	case 1: {
-//		Visual Field;
-		Humanplayer first;
-		Humanplayer second;
-//		Field.Field(arr);
-
+		GamePlayerVsPlayer(field);
 		break;
 	}
 	case 2: {
-		Humanplayer first;
-		AITurn second;
+		GamePlayerVsComputer(field);
+
 		break;
 	}
 	case 3: {
-		AITurn first;
-		Humanplayer second;
+		GameComputerVsPlayer(field);
+
 		break;
 	}
 	case 4: {
-		AITurn first;
-		AITurn second;
+		GameComputerVsComputer(field);
+
 		break;
 	}
 	default:
 		break;
+	}
+}
+
+void IGame::GamePlayerVsPlayer(int field[][3]) {
+	Visual Field;
+	Check checks;
+	HumanPlayer first;
+	HumanPlayer second;
+	Field.PrintField(field);
+	while (checks.checkdraw(field) != 9) {
+		first.Turn(field, 2);
+		Field.PrintField(field);
+		checks.checkwin(field);
+		second.Turn(field, 3);
+		Field.PrintField(field);
+		checks.checkwin(field);
+	}
+}
+
+void IGame::GamePlayerVsComputer(int field[][3]) {
+	Visual Field;
+	Check checks;
+	HumanPlayer first;
+	AIPlayer second;
+	Field.PrintField(field);
+	while (checks.checkdraw(field) != 9) {
+		first.Turn(field, 2);
+		Field.PrintField(field);
+		checks.checkwin(field);
+		second.Turn(field, 3);
+		Field.PrintField(field);
+		checks.checkwin(field);
+	}
+}
+
+void IGame::GameComputerVsPlayer(int field[][3]) {
+	Visual Field;
+	Check checks;
+	AIPlayer first;
+	HumanPlayer second;
+	Field.PrintField(field);
+	while (checks.checkdraw(field) != 9) {
+		first.Turn(field, 2);
+		Field.PrintField(field);
+		checks.checkwin(field);
+		second.Turn(field, 3);
+		Field.PrintField(field);
+		checks.checkwin(field);
+	}
+}
+
+void IGame::GameComputerVsComputer(int field[][3]) {
+	Visual Field;
+	Check checks;
+	AIPlayer first;
+	AIPlayer second;
+	Field.PrintField(field);
+	while (checks.checkdraw(field) != 9) {
+		first.Turn(field, 2);
+		Field.PrintField(field);
+		checks.checkwin(field);
+		second.Turn(field, 3);
+		Field.PrintField(field);
+		checks.checkwin(field);
 	}
 }

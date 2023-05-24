@@ -1,7 +1,17 @@
 #include "AIPlayer.h"
 #include <iostream>
+#include <time.h>
 
-void AITurn::_turn(int arr[][3], int symbolnumber){
-	srand(time(NULL));
-	arr[rand() % 2][rand() % 2] = symbolnumber;
+void AIPlayer::Turn(int field[3][3], int symbolnumber) {
+	time_t times;
+	srand(time(&times));
+	while (true) {
+		int row, column;
+		row = rand() % 3;
+		column = rand() % 3;
+		if (field[row][column] == 0) {
+			field[row][column] = symbolnumber;
+			break;
+		}
+	}
 }

@@ -2,5 +2,10 @@
 
 class IGame {
 public:
-	virtual void _select(int arr[][3]);
+	void Select(int field[][3]);
+private:
+	void GamePlayerVsPlayer(int field[][3]);
+	void GamePlayerVsComputer(int field[][3]);
+	void GameComputerVsPlayer(int field[][3]);
+	void GameComputerVsComputer(int field[][3]);
 };

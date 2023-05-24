@@ -128,16 +128,22 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="AIPlayer.cpp" />
-    <ClCompile Include="Humanplayer.cpp" />
+    <ClCompile Include="Check.cpp" />
+    <ClCompile Include="HumanPlayer.cpp" />
     <ClCompile Include="IGame.cpp" />
-    <ClCompile Include="Iturn.cpp" />
-    <ClCompile Include="XaNdO.cpp" />
+    <ClCompile Include="IPlayer.cpp" />
+    <ClCompile Include="Save.cpp" />
+    <ClCompile Include="Visual.cpp" />
+    <ClCompile Include="XandO.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AIPlayer.h" />
-    <ClInclude Include="Humanplayer.h" />
+    <ClInclude Include="Check.h" />
+    <ClInclude Include="HumanPlayer.h" />
     <ClInclude Include="IGame.h" />
-    <ClInclude Include="Iturn.h" />
+    <ClInclude Include="IPlayer.h" />
+    <ClInclude Include="Save.h" />
+    <ClInclude Include="Visual.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
