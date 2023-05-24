@@ -2,7 +2,8 @@
 #include "IGame.h"
 using namespace std;
 
-void Check::checkvin1(int check[][3]){
+void Check::checkvin1(int check[][3])
+{
 	for (int h = 2; h != 3; h++) {
 		for (int i = 0; i < 3; i++) {
 			int x = 0;
@@ -130,7 +131,7 @@ void Check::win(int vin, int field[][3])
 				field[i][j] = 0;
 			}
 		}
-		cout << "Ïîáåäèë êðåñòèê :3\n";
+		cout << "Победил крестик :3\n";
 		IGame Gim;
 		Gim.Select(field);
 	}
@@ -140,7 +141,7 @@ void Check::win(int vin, int field[][3])
 				field[i][j] = 0;
 			}
 		}
-		cout << "Ïîáåäèëà äûðêà îò áóáëèêà :D\n";
+		cout << "Победила дырка от бублика :D\n";
 		IGame Gim;
 		Gim.Select(field);
 	}
@@ -159,7 +160,7 @@ int Check::checkdraw(int check[][3])
 		}
 	}
 	if (sum == 9) {
-		cout << "Íè÷üÿ\n";
+		cout << "Ничья\n";
 		for (int i = 0; i < 3; i++) {
 			for (int j = 0; j < 3; j++) {
 				check[i][j] = 0;
