@@ -2,7 +2,7 @@
 #include <iostream>
 #include <time.h>
 
-void AIPlayer::Turn(int field[][3], int symbolnumber) {
+void AIPlayer::Turn(int field[3][3], int symbolnumber) {
 	time_t times;
 	srand(time(&times));
 	while (true) {
