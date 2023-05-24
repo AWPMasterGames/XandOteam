@@ -11,13 +11,13 @@ void HumanPlayer::Turn(int field[][3], int symbolnumber) {
 		cin >> choise;
 		switch (choise) {
 		case 1: {
-			Save lox;
-			lox.SaveGame(field, symbolnumber);
+			Save saver;
+			saver.SaveGame(field, symbolnumber);
 			cout << "Что дальше?\n1 - Продолжить\n2 - Начать заново" << endl;
 			cin >> choise;
 			switch (choise) {
 			case 1: {
-				lox.OutGame(field, symbolnumber);
+				saver.OutGame(field, symbolnumber);
 				break;
 			}
 			default:
