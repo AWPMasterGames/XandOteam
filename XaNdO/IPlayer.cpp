@@ -3,5 +3,5 @@
 using namespace std;
 
 void IPlayer::Turn() {
-	cout << "Õîä ïðîïóùåí";
+	cout << "Ð¥Ð¾Ð´Ð° Ð½Ðµ Ð±ÑƒÐ´Ñ";
 }
