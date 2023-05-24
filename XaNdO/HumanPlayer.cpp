@@ -6,14 +6,14 @@ using namespace std;
 
 void HumanPlayer::Turn(int field[][3], int symbolnumber) {
 	while (true) {
-		cout << "Õîòèòå ïîñòàâèòü èãðó íà ïàóçó?" << endl << "1 - Äà\n2 - Íåò" << endl;
+		cout << "Ð¥Ð¾Ñ‚Ð¸Ñ‚Ðµ Ð¿Ð¾ÑÑ‚Ð°Ð²Ð¸Ñ‚ÑŒ Ð¸Ð³Ñ€Ñƒ Ð½Ð° Ð¿Ð°ÑƒÐ·Ñƒ?" << endl << "1 - Ð”Ð°\n2 - ÐÐµÑ‚" << endl;
 		int choise;
 		cin >> choise;
 		switch (choise) {
 		case 1: {
 			Save lox;
 			lox.SaveGame(field, symbolnumber);
-			cout << "×òî äàëüøå?\n1 - Ïðîäîëæèòü\n2 - Íà÷àòü çàíîâî" << endl;
+			cout << "Ð§Ñ‚Ð¾ Ð´Ð°Ð»ÑŒÑˆÐµ?\n1 - ÐŸÑ€Ð¾Ð´Ð¾Ð»Ð¶Ð¸Ñ‚ÑŒ\n2 - ÐÐ°Ñ‡Ð°Ñ‚ÑŒ Ð·Ð°Ð½Ð¾Ð²Ð¾" << endl;
 			cin >> choise;
 			switch (choise) {
 			case 1: {
@@ -31,15 +31,15 @@ void HumanPlayer::Turn(int field[][3], int symbolnumber) {
 			break;
 		}
 		int row, column;
-		cout << "Êóäà õîòèòå ïîñòàâèòü ñèìâîë?\n";
-		cout << "Ïî ðÿäó: ";
+		cout << "ÐšÑƒÐ´Ð° Ñ…Ð¾Ñ‚Ð¸Ñ‚Ðµ Ð¿Ð¾ÑÑ‚Ð°Ð²Ð¸Ñ‚ÑŒ ÑÐ¸Ð¼Ð²Ð¾Ð»?\n";
+		cout << "ÐŸÐ¾ Ñ€ÑÐ´Ñƒ: ";
 		cin >> row;
-		cout << "Ïî ñòîëáöó: ";
+		cout << "ÐŸÐ¾ ÑÑ‚Ð¾Ð»Ð±Ñ†Ñƒ: ";
 		cin >> column;
 		if (field[row - 1][column - 1] == 0 && row < 4 && row>0 && column < 4 && column >0) {
 			field[row - 1][column - 1] = symbolnumber;
 			break;
 		}
-		cout << "Íåâåðíî âûáðàíî ïîëå" << endl;
+		cout << "ÐÐµÐ²ÐµÑ€Ð½Ð¾ Ð²Ñ‹Ð±Ñ€Ð°Ð½Ð¾ Ð¿Ð¾Ð»Ðµ" << endl;
 	}
 }
